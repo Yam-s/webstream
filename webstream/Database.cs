@@ -32,7 +32,7 @@ namespace webstream
 
 		public static void UpdateDB()
 		{
-			var jsonDir = System.IO.Directory.GetCurrentDirectory() + "db.json";
+			var jsonDir = System.IO.Directory.GetCurrentDirectory() + "\\db.json";
 			File.WriteAllText(jsonDir, JsonConvert.SerializeObject(new Data(Servers, Tasks), Formatting.Indented));
 		}
 	}

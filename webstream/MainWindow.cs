@@ -27,7 +27,7 @@ namespace webstream
 		{
 			try
 			{
-				var jsonDir = Directory.GetCurrentDirectory() + "db.json";
+				var jsonDir = Directory.GetCurrentDirectory() + "\\db.json";
 
 				if (!Database.Load(jsonDir))
 					return;
