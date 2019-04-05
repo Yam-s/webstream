@@ -144,6 +144,7 @@
 			this.Name = "MainWindow";
 			this.ShowIcon = false;
 			this.Text = "Webstream";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
 			this.Load += new System.EventHandler(this.MainWindow_Load);
 			this.contextMenuStrip_EditDelete.ResumeLayout(false);
 			this.contextMenuStrip_Add.ResumeLayout(false);

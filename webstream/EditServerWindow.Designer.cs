@@ -121,6 +121,7 @@
 			this.MinimumSize = new System.Drawing.Size(308, 195);
 			this.Name = "EditServerWindow";
 			this.ShowIcon = false;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Add Server";
 			this.Load += new System.EventHandler(this.EditServerWindow_Load);
 			this.ResumeLayout(false);

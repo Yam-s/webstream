@@ -61,6 +61,7 @@
 			this.MinimumSize = new System.Drawing.Size(800, 500);
 			this.Name = "FileIndexWindow";
 			this.ShowIcon = false;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Files";
 			this.Load += new System.EventHandler(this.FileIndexWindow_Load);
 			this.ResumeLayout(false);

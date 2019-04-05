@@ -5,6 +5,7 @@ using System.Net;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using webstream.Properties;
 
 namespace webstream
 {
@@ -18,13 +19,12 @@ namespace webstream
 			listView_ServerList.Columns.Add(" ", -2, HorizontalAlignment.Left);
 			listView_ServerList.Columns.Add("Name", -2);
 			listView_ServerList.Columns.Add("URL", -2);
-
-			//var test = new TaskForm();
-			//test.ShowDialog();
 		}
 
 		private void MainWindow_Load(object sender, EventArgs e)
 		{
+			if (Settings.Default.Position != null)
+				Location = Settings.Default.Position;
 			try
 			{
 				var jsonDir = Directory.GetCurrentDirectory() + "\\db.json";
@@ -38,6 +38,12 @@ namespace webstream
 			{
 				MessageBox.Show(exception.Message);
 			}
+		}
+
+		private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			Settings.Default.Position = Location;
+			Settings.Default.Save();
 		}
 
 		private void Button_AddServer_Click(object sender, EventArgs e)

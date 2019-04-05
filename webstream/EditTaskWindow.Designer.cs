@@ -97,6 +97,7 @@
 			this.MinimizeBox = false;
 			this.Name = "EditTaskWindow";
 			this.ShowIcon = false;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Add Task";
 			this.Load += new System.EventHandler(this.NewTaskForm_Load);
 			this.ResumeLayout(false);
