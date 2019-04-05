@@ -57,10 +57,11 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(784, 461);
 			this.Controls.Add(this.treeView_Index);
+			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.MinimumSize = new System.Drawing.Size(800, 500);
 			this.Name = "FileIndexWindow";
 			this.ShowIcon = false;
-			this.Text = "FileIndexWindow";
+			this.Text = "Files";
 			this.Load += new System.EventHandler(this.FileIndexWindow_Load);
 			this.ResumeLayout(false);
 

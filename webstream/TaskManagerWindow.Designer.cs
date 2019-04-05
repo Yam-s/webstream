@@ -34,9 +34,9 @@
 			this.button_OK = new System.Windows.Forms.Button();
 			this.button_Cancel = new System.Windows.Forms.Button();
 			this.contextMenuStrip_EditDelete = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.contextMenuStrip_Add = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.contextMenuStrip_Add = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip_EditDelete.SuspendLayout();
 			this.contextMenuStrip_Add.SuspendLayout();
@@ -100,14 +100,6 @@
 			this.contextMenuStrip_EditDelete.Size = new System.Drawing.Size(108, 48);
 			this.contextMenuStrip_EditDelete.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip_EditDelete_ItemClicked);
 			// 
-			// contextMenuStrip_Add
-			// 
-			this.contextMenuStrip_Add.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem});
-			this.contextMenuStrip_Add.Name = "contextMenuStrip_Add";
-			this.contextMenuStrip_Add.Size = new System.Drawing.Size(97, 26);
-			this.contextMenuStrip_Add.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip_Add_ItemClicked);
-			// 
 			// editToolStripMenuItem
 			// 
 			this.editToolStripMenuItem.Name = "editToolStripMenuItem";
@@ -119,6 +111,14 @@
 			this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
 			this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
 			this.deleteToolStripMenuItem.Text = "Delete";
+			// 
+			// contextMenuStrip_Add
+			// 
+			this.contextMenuStrip_Add.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem});
+			this.contextMenuStrip_Add.Name = "contextMenuStrip_Add";
+			this.contextMenuStrip_Add.Size = new System.Drawing.Size(97, 26);
+			this.contextMenuStrip_Add.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip_Add_ItemClicked);
 			// 
 			// addToolStripMenuItem
 			// 
@@ -135,8 +135,10 @@
 			this.Controls.Add(this.button_OK);
 			this.Controls.Add(this.button_AddTask);
 			this.Controls.Add(this.listView_TaskList);
+			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Name = "TaskManagerWindow";
-			this.Text = "TaskManagerWindow";
+			this.ShowIcon = false;
+			this.Text = "Tasks";
 			this.Load += new System.EventHandler(this.TaskManagerWindow_Load);
 			this.contextMenuStrip_EditDelete.ResumeLayout(false);
 			this.contextMenuStrip_Add.ResumeLayout(false);

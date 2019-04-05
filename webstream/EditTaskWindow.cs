@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace webstream
 {
-	public partial class EditTaskForm : Form
+	public partial class EditTaskWindow : Form
 	{
 		public bool Canceled { get; private set; } = true;
 
 		private FileTask Task;
 		private bool newTask = false;
-		public EditTaskForm(FileTask task, bool isNewTask)
+		public EditTaskWindow(FileTask task, bool isNewTask)
 		{
 			InitializeComponent();
 			Task = task;

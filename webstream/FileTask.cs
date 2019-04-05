@@ -32,7 +32,7 @@ namespace webstream
 			{
 				newString = string.Format("{0}://{1}:{2}@{3}", file.Scheme, server.Username, server.Password, file.Host + file.PathAndQuery);
 			}
-			System.Diagnostics.Process.Start("cmd.exe", "/K " + Command.Replace("%f", newString));
+			System.Diagnostics.Process.Start("cmd.exe", "/C " + Command.Replace("%f", newString));
 		}
 	}
 }

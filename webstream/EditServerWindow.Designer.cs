@@ -76,7 +76,7 @@
 			this.textBox_Name.Cue = "Name";
 			this.textBox_Name.Location = new System.Drawing.Point(12, 13);
 			this.textBox_Name.Name = "textBox_Name";
-			this.textBox_Name.Size = new System.Drawing.Size(268, 20);
+			this.textBox_Name.Size = new System.Drawing.Size(268, 22);
 			this.textBox_Name.TabIndex = 7;
 			// 
 			// textBox_Password
@@ -84,7 +84,7 @@
 			this.textBox_Password.Cue = "Password";
 			this.textBox_Password.Location = new System.Drawing.Point(150, 89);
 			this.textBox_Password.Name = "textBox_Password";
-			this.textBox_Password.Size = new System.Drawing.Size(130, 20);
+			this.textBox_Password.Size = new System.Drawing.Size(130, 22);
 			this.textBox_Password.TabIndex = 6;
 			// 
 			// textBox_Username
@@ -92,7 +92,7 @@
 			this.textBox_Username.Cue = "Username";
 			this.textBox_Username.Location = new System.Drawing.Point(12, 89);
 			this.textBox_Username.Name = "textBox_Username";
-			this.textBox_Username.Size = new System.Drawing.Size(128, 20);
+			this.textBox_Username.Size = new System.Drawing.Size(128, 22);
 			this.textBox_Username.TabIndex = 5;
 			// 
 			// textBox_URL
@@ -100,7 +100,7 @@
 			this.textBox_URL.Cue = "URL";
 			this.textBox_URL.Location = new System.Drawing.Point(12, 39);
 			this.textBox_URL.Name = "textBox_URL";
-			this.textBox_URL.Size = new System.Drawing.Size(268, 20);
+			this.textBox_URL.Size = new System.Drawing.Size(268, 22);
 			this.textBox_URL.TabIndex = 3;
 			// 
 			// EditServerWindow
@@ -116,6 +116,7 @@
 			this.Controls.Add(this.textBox_URL);
 			this.Controls.Add(this.button_CancelAddServer);
 			this.Controls.Add(this.button_ConfirmAddServer);
+			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.MaximumSize = new System.Drawing.Size(308, 195);
 			this.MinimumSize = new System.Drawing.Size(308, 195);
 			this.Name = "EditServerWindow";

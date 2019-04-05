@@ -31,7 +31,7 @@ namespace webstream
 
 		private void OpenEditTaskWindow(FileTask task, bool isNewTask)
 		{
-			using (var editTaskWindow = new EditTaskForm(task, isNewTask))
+			using (var editTaskWindow = new EditTaskWindow(task, isNewTask))
 			{
 				editTaskWindow.ShowDialog();
 

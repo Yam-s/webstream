@@ -66,11 +66,11 @@
       <DependentUpon>FileIndexWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="FileTask.cs" />
-    <Compile Include="NewTaskForm.cs">
+    <Compile Include="EditTaskWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewTaskForm.Designer.cs">
-      <DependentUpon>NewTaskForm.cs</DependentUpon>
+    <Compile Include="EditTaskWindow.Designer.cs">
+      <DependentUpon>EditTaskWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="TaskManagerWindow.cs">
       <SubType>Form</SubType>
@@ -108,8 +108,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="NewTaskForm.resx">
-      <DependentUpon>NewTaskForm.cs</DependentUpon>
+    <EmbeddedResource Include="EditTaskWindow.resx">
+      <DependentUpon>EditTaskWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaskManagerWindow.resx">
       <DependentUpon>TaskManagerWindow.cs</DependentUpon>

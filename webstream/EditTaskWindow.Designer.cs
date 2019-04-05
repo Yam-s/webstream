@@ -1,6 +1,6 @@
 ﻿namespace webstream
 {
-	partial class EditTaskForm
+	partial class EditTaskWindow
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -69,7 +69,7 @@
 			this.textBox_Filetypes.Cue = "Comma seperated list of filetypes e.g: \".mkv, .mp4\"";
 			this.textBox_Filetypes.Location = new System.Drawing.Point(12, 104);
 			this.textBox_Filetypes.Name = "textBox_Filetypes";
-			this.textBox_Filetypes.Size = new System.Drawing.Size(410, 20);
+			this.textBox_Filetypes.Size = new System.Drawing.Size(410, 22);
 			this.textBox_Filetypes.TabIndex = 4;
 			// 
 			// button_Cancel
@@ -83,7 +83,7 @@
 			this.button_Cancel.UseVisualStyleBackColor = true;
 			this.button_Cancel.Click += new System.EventHandler(this.Button_Cancel_Click);
 			// 
-			// EditTaskForm
+			// EditTaskWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,8 +93,9 @@
 			this.Controls.Add(this.textBox_Command);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button_Save);
+			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.MinimizeBox = false;
-			this.Name = "EditTaskForm";
+			this.Name = "EditTaskWindow";
 			this.ShowIcon = false;
 			this.Text = "Add Task";
 			this.Load += new System.EventHandler(this.NewTaskForm_Load);

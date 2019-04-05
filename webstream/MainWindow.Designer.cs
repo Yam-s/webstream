@@ -137,6 +137,7 @@
 			this.Controls.Add(this.button_EditServer);
 			this.Controls.Add(this.button_AddServer);
 			this.Controls.Add(this.listView_ServerList);
+			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.MaximizeBox = false;
 			this.MaximumSize = new System.Drawing.Size(1920, 1080);
 			this.MinimumSize = new System.Drawing.Size(450, 450);
