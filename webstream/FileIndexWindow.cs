@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace webstream
 {
@@ -73,16 +73,21 @@ namespace webstream
 		private void treeView_Index_DoubleClick(object sender, MouseEventArgs e)
 		{
 			var filetype = System.IO.Path.GetExtension(((Uri)treeView_Index.SelectedNode.Tag).OriginalString);
-			//var taskChoices = new List<FileTask>();
+			if (filetype.Length < 1)
+				return;
+
+			var taskChoices = new List<FileTask>();
 			foreach (var task in Database.Tasks)
 			{
 				if (task.Filetypes.Contains(filetype))
 				{
 					task.Run((Uri)treeView_Index.SelectedNode.Tag, Server);
 					// TO-DO: Add ability to choose from a list of tasks if multiple filetypes match.
-					//taskChoices.Add(task);
+					taskChoices.Add(task);
 				}
 			}
+			if (!taskChoices.Any())
+				MessageBox.Show("No task associated with selected filetype.");
 		}
 
 		private void treeView_Index_BeforeExpand(object sender, TreeViewCancelEventArgs e)
