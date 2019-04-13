@@ -26,7 +26,7 @@ namespace webstream
 				MainWindow.WebClient.Headers[HttpRequestHeader.Authorization] = string.Format("Basic {0}", auth);
 
 				var node = new TreeNode(Server.Name);
-				node.Tag = Server.URL;
+				node.Tag = new Uri(Server.URL);
 				node.Expand();
 
 				buildTree(Server.URL, node);
@@ -53,13 +53,19 @@ namespace webstream
 
 		private void buildTree(string URL, TreeNode startNode)
 		{
+			Console.WriteLine(String.Format("Indexing page: {0}\n", URL));
 			var page = MainWindow.WebClient.DownloadString(URL);
-			var regex = new Regex("<a href=\"(?<href>.*)\">.*</a>");
+			var regex = new Regex("<a href=\"(?<href>.*)\">(?<name>.*)</a>");
 			var matchCollection = regex.Matches(page);
 
 			foreach (Match match in matchCollection)
 			{
-				if (match.Groups["href"].Value == "../")
+				// prevent indexing previous directories, current directories or non directories/files.
+				if (match.Groups["href"].Value == "../" || match.Groups["href"].Value == "/" || match.Groups["href"].Value.Contains("?"))
+					continue;
+
+				// Web server index page specifics.. I guess?
+				if (match.Groups["name"].Value == "Parent Directory")
 					continue;
 
 				var childNode = startNode.Nodes.Add(Uri.UnescapeDataString(match.Groups["href"].Value));
