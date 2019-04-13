@@ -53,7 +53,6 @@ namespace webstream
 
 		private void buildTree(string URL, TreeNode startNode)
 		{
-			Console.WriteLine(String.Format("Indexing page: {0}\n", URL));
 			var page = MainWindow.WebClient.DownloadString(URL);
 			var regex = new Regex("<a href=\"(?<href>.*)\">(?<name>.*)</a>");
 			var matchCollection = regex.Matches(page);
