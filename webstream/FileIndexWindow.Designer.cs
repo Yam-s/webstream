@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.treeView_Index = new System.Windows.Forms.TreeView();
+			this.Button_Refresh = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// treeView_Index
@@ -40,22 +41,33 @@
 			this.treeView_Index.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.treeView_Index.FullRowSelect = true;
 			this.treeView_Index.HideSelection = false;
-			this.treeView_Index.Location = new System.Drawing.Point(12, 12);
+			this.treeView_Index.Location = new System.Drawing.Point(12, 38);
 			this.treeView_Index.Margin = new System.Windows.Forms.Padding(0);
 			this.treeView_Index.Name = "treeView_Index";
 			this.treeView_Index.ShowRootLines = false;
-			this.treeView_Index.Size = new System.Drawing.Size(763, 440);
+			this.treeView_Index.Size = new System.Drawing.Size(763, 414);
 			this.treeView_Index.TabIndex = 0;
 			this.treeView_Index.BeforeCollapse += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView_Index_BeforeCollapse);
 			this.treeView_Index.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView_Index_BeforeExpand);
 			this.treeView_Index.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.treeView_Index_DoubleClick);
 			this.treeView_Index.MouseDown += new System.Windows.Forms.MouseEventHandler(this.treeView_Index_MouseDown);
 			// 
+			// Button_Refresh
+			// 
+			this.Button_Refresh.Location = new System.Drawing.Point(12, 12);
+			this.Button_Refresh.Name = "Button_Refresh";
+			this.Button_Refresh.Size = new System.Drawing.Size(75, 23);
+			this.Button_Refresh.TabIndex = 1;
+			this.Button_Refresh.Text = "Refresh";
+			this.Button_Refresh.UseVisualStyleBackColor = true;
+			this.Button_Refresh.Click += new System.EventHandler(this.Button_Refresh_Click);
+			// 
 			// FileIndexWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(784, 461);
+			this.Controls.Add(this.Button_Refresh);
 			this.Controls.Add(this.treeView_Index);
 			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.MinimumSize = new System.Drawing.Size(800, 500);
@@ -71,5 +83,6 @@
 		#endregion
 
 		private System.Windows.Forms.TreeView treeView_Index;
+		private System.Windows.Forms.Button Button_Refresh;
 	}
 }

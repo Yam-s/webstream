@@ -12,6 +12,8 @@ namespace webstream
 	{
 		public WebServer Server;
 		private bool isDoubleClick;
+
+		private TreeNode rootNode;
 		public FileIndexWindow(WebServer server)
 		{
 			InitializeComponent();
@@ -25,15 +27,15 @@ namespace webstream
 				var auth = Convert.ToBase64String(Encoding.ASCII.GetBytes(String.Format("{0}:{1}", Server.Username, Server.Password)));
 				MainWindow.WebClient.Headers[HttpRequestHeader.Authorization] = string.Format("Basic {0}", auth);
 
-				var node = new TreeNode(Server.Name);
-				node.Tag = new Uri(Server.URL);
-				node.Expand();
+				rootNode = new TreeNode(Server.Name);
+				rootNode.Tag = new Uri(Server.URL);
+				rootNode.Expand();
 
-				buildTree(Server.URL, node);
+				buildTree(Server.URL, rootNode);
 
 				treeView_Index.Invoke((MethodInvoker)(() =>
 				{
-					updateTree(node);
+					updateTree(rootNode);
 				}));
 			}
 			catch (Exception exception)
@@ -110,6 +112,12 @@ namespace webstream
 		private void treeView_Index_MouseDown(object sender, MouseEventArgs e)
 		{
 			isDoubleClick = e.Clicks > 1;
+		}
+
+		private void Button_Refresh_Click(object sender, EventArgs e)
+		{
+			rootNode.Nodes.Clear();
+			FileIndexWindow_Load(null, null);
 		}
 	}
 }
