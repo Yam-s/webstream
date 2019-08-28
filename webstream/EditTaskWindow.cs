@@ -29,7 +29,7 @@ namespace webstream
 				return;
 
 			textBox_Command.Text = Task.Command;
-			textBox_Filetypes.Text = String.Join(String.Empty, Task.Filetypes);
+			textBox_Filetypes.Text = String.Join(", ", Task.Filetypes);
 		}
 
 		private void button_Save_Click(object sender, EventArgs e)
