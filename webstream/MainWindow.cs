@@ -42,7 +42,7 @@ namespace webstream
 
 		private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			Settings.Default.Position = Location;
+			Settings.Default.Position = WindowState == FormWindowState.Normal ? Location : RestoreBounds.Location;
 			Settings.Default.Save();
 		}
 
